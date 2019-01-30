@@ -1,0 +1,88 @@
+---
+title: "Make an R Package!"
+subtitle: ""
+author: "Katherine Simeon"
+date: "March 7, 2019 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: ["default", "metropolis", "metropolis-fonts"]
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: title-slide, left, middle
+
+# Make an R Package! 📦 
+
+<br>
+
+
+<h3> Katherine Simeon </h3>  
+
+<br>
+<h3> Northwestern R User Group <br> March 7, 2019 </h3>  
+  
+---
+  
+# Acknowledgments  
+  
+<br><br><br>
+    
+    
+<img src="https://rladieschicago.org/img/rladies-chicago_banner_plain.jpg" height="50px" >  
+  
+Stephanie Kirmer's [R Package Tutorial](https://github.com/skirmer/r_packages)   
+  
+Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)  
+  
+---
+
+# Our Objective  
+  
+To demonstrate the basics of creating a package in R.  
+ 
+--
+  
+.pull-left[
+## What we'll do:   
+  
+1. Set up an `.RProj` file to be made into a package.    
+2. Document the functions.  
+3. Compile documentation & install our package.  
+]
+  
+--
+  
+.pull-right[
+## What we need:  
+  
+1. Function(s) you want in your package.  
+2. Packages `devtools` and `roxygen2`   
+]
+  
+  
+---
+    
+# Install the 📦s used to make a 📦
+  
+<br>
+  
+```{r eval=FALSE}
+install.packages(“devtools”) # Install
+install.packages(“roxygen2”)
+
+library(devtools) # Load
+library(roxygen2)
+```
+
+  
+---  
+  

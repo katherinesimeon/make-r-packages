@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make an R Package!</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Katherine Simeon" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, left, middle
+
+# Make an R Package! 📦 
+
+&lt;br&gt;
+
+
+&lt;h3&gt; Katherine Simeon &lt;/h3&gt;  
+
+&lt;br&gt;
+&lt;h3&gt; Northwestern R User Group &lt;br&gt; March 7, 2019 &lt;/h3&gt;  
+  
+---
+  
+# Acknowledgments  
+  
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    
+    
+&lt;img src="https://rladieschicago.org/img/rladies-chicago_banner_plain.jpg" height="50px" &gt;  
+  
+Stephanie Kirmer's [R Package Tutorial](https://github.com/skirmer/r_packages)   
+  
+Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)  
+  
+---
+
+# Our Objective  
+  
+To demonstrate the basics of creating a package in R.  
+ 
+--
+  
+.pull-left[
+## What we'll do:   
+  
+1. Set up an `.RProj` file to be made into a package.    
+2. Document the functions.  
+3. Compile documentation &amp; install our package.  
+]
+  
+--
+  
+.pull-right[
+## What we need:  
+  
+1. Function(s) you want in your package.  
+2. Packages `devtools` and `roxygen2`   
+]
+  
+  
+---
+    
+# Install the 📦s used to make a 📦
+  
+&lt;br&gt;
+  
+
+```r
+install.packages(“devtools”) # Install
+install.packages(“roxygen2”)
+
+library(devtools) # Load
+library(roxygen2)
+```
+
+  
+---
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
