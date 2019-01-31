@@ -71,9 +71,9 @@ To demonstrate the basics of creating a package in R.
   
 ---
     
-# Install the 📦s used to make a 📦
+# First steps  
   
-<br>
+**1.** Install the 📦s used to make a 📦  
   
 ```{r eval=FALSE}
 install.packages(“devtools”) # Install
@@ -82,9 +82,27 @@ install.packages(“roxygen2”)
 library(devtools) # Load
 library(roxygen2)
 ```
-
+  
+<br>
+  
+**2.** Put all the functions you want in your package into a single directory. 
   
 ---
   
 # Make an R project  
+    
+Then, we'll create a project:  
+    
+.center[ <img src="img/Rproj1.png" height="100px" /> ]  
   
+--
+  
+.pull-left[
+<img src="img/Rproj2.png" /> 
+]
+  
+--
+  
+.pull-right[
+<img src="img/Rproj3.png" />   
+]
