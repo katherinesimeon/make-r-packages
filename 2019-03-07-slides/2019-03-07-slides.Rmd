@@ -106,3 +106,6 @@ Then, we'll create a project:
 .pull-right[
 <img src="img/Rproj3.png" />   
 ]
+  
+---
+  
