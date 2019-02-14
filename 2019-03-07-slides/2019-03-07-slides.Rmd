@@ -109,3 +109,188 @@ Then, we'll create a project:
   
 ---
   
+# Package Set Up  
+  
+  
+.pull-left[
+  
+1. Name your package.  
+2. Indicate what files you want in your package (these files should be in a single directory).    
+3. Create your project as a subdirectory in the same location as the aforementioned files.
+]
+  
+  
+.pull-right[
+<img src="img/Rproj4.png" />   
+]
+  
+---
+  
+# From the command line  
+    
+<img src="https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png" height="70px" align="right" />
+  
+<br>  
+  
+Use `usethis` - a [package](https://github.com/r-lib/usethis) that automates repetitive tasks in project development:  
+```{r, eval=FALSE} 
+usethis::create_package("packagename")
+```
+   
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION        
+    |                       
+    ├── NAMESPACE
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         #<< 
+    |                       
+    ├── NAMESPACE
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     
+```
+  
+---
+  
+# We have a package!
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata!  
+    |                       
+    ├── NAMESPACE           #<<
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata!  
+    |                       
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    #<<
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                       
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   #<<
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     
+```
+  
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                        
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   # Documentation for functions
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     #<< 
+```
+  
+---
+  
+# We have a package!  
+  
+```{r, eval=FALSE}  
+A_PACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                        
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   # Documentation for functions
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     # R project file you created for your package
+```
+  
+---
+  
+
