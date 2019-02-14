@@ -293,4 +293,27 @@ A_PACKAGE
   
 ---
   
+# Documentation  
+  
+.pull-left[
+1. Open a function script.  
+2. Place your cursor inside the function's curley brackets `{}`  
+3. In top dropdown menu:  
+  + Click **Code**  
+  + Select **Insert Roxygen Skeleton**   
+  
+]
+   
+--
+  
+.pull-right[
+Fill this out:  
+  
+<img src="img/roxygen.png" height="200px" />   
+]
+
+   
+---
+  
+
 
