@@ -315,5 +315,28 @@ Fill this out:
    
 ---
   
-
-
+# Roxygen Skeleton  
+  
+```{r, eval=FALSE}
+#' Minus Ten  
+#'  
+#' Subtract 10 from a given number
+#'
+#' @param number a number
+#'
+#' @return a number that is the provided number minus 10
+#' @export
+#'
+#' @examples
+#' minus_ten(22) will return 12
+minus_ten <- function(number) {
+  number-10
+}
+```
+  
+  
+<br>
+  
+.right[Learn more at http://r-pkgs.had.co.nz/man.html]
+  
+---
