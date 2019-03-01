@@ -1,1 +1,1 @@
-[]
+[{"allow_restart":true,"alt_buffer":false,"autoclose":0,"buffered_output":"","caption":"Terminal 1","channel_id":"6857","channel_mode":1,"child_procs":false,"cols":103,"cwd":"~/Documents/R_Programming/Northwestern_RUG/make-r-packages/2019-03-07-slides","exit_code":null,"handle":"50E89F8D","interaction_mode":2,"max_output_lines":1000,"restarted":false,"rows":20,"shell_type":7,"show_on_output":false,"terminal_sequence":1,"title":"~/Documents/R_Programming/Northwestern_RUG/make-r-packages/2019-03-07-slides","track_env":true,"zombie":false}]

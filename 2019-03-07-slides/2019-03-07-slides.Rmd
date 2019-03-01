@@ -142,7 +142,7 @@ usethis::create_package("packagename")
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION        
     |                       
@@ -164,7 +164,7 @@ A_PACKAGE
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         #<< 
     |                       
@@ -186,7 +186,7 @@ A_PACKAGE
 # We have a package!
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         # Important metadata!  
     |                       
@@ -208,7 +208,7 @@ A_PACKAGE
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         # Important metadata!  
     |                       
@@ -230,7 +230,7 @@ A_PACKAGE
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         # Important metadata! 
     |                       
@@ -252,7 +252,7 @@ A_PACKAGE
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         # Important metadata! 
     |                        
@@ -274,7 +274,7 @@ A_PACKAGE
 # We have a package!  
   
 ```{r, eval=FALSE}  
-A_PACKAGE  
+aPACKAGE  
     |
     ├── DESCRIPTION         # Important metadata! 
     |                        
@@ -349,6 +349,14 @@ minus_ten <- function(number) {
   
 2. Render your documentation: `devtools::document()`  
   
+```{r, eval=FALSE}
+Writing NAMESPACE
+Loading mathFun
+Writing NAMESPACE
+Writing add_ten.Rd
+Writing minus_ten.Rd
+```
+  
 --
   
 3. Install your package: `devtools::install()`  
@@ -361,4 +369,17 @@ minus_ten <- function(number) {
 .right[*These are also the steps for updating your package later on!*]    
   
   
-
+---
+  
+# Add dataset to a package  
+  
+Data is an `.RData` file in a folder labelled, "data" in your package.  
+  
+Load your data into your working directory and save it:  
+  
+```{r, eval=FALSE}
+save(mydata,file="data/mydata.RData") 
+```
+   
+   
+Add a `data.R` file that has documentation of your dataset (with roxygen comments).  
