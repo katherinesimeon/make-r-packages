@@ -1,0 +1,12 @@
+Package: mathFun
+Title: Functions that subtracts or adds 10 to a given number
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com")
+Description: Useless functions that subtracts or adds 10 to a given number. Example package for tutorial on making a package.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
