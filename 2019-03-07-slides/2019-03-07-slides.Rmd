@@ -385,6 +385,33 @@ minus_ten <- function(number) {
   
 ---
   
+# Unit Testing  
+    
+<img src="https://raw.githubusercontent.com/r-lib/testthat/master/man/figures/logo.png" height="70px" align="right" />
+  
+<br>  
+  
+The `testthat` [package](https://github.com/r-lib/testthat) has functions that help create unit tests.  
+  
+In the main directory of your package, use `usethis`  
+
+```{r, eval=FALSE} 
+usethis::use_test("functionname") # Create your test
+
+devtools::test() # Runs the test you've made.
+```
+  
+--
+  
+Thi>
+  
+s wThiill create a test folder with an R script to write your unit test.  
+  
+Use `devtools` to run your tests.  
+  
+  
+---
+  
 # Add dataset to a package  
   
 Data is an `.RData` file in a folder labelled, "data" in your package.  
