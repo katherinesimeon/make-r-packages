@@ -40,6 +40,20 @@ Stephanie Kirmer's [R Package Tutorial](https://github.com/skirmer/r_packages)
 Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)  
   
 ---
+  
+# Why packages?  
+  
+A package is a **fundamental**, **reproducible**, and **shareable** unit of R code.  
+  
+--
+  
+When we create a package, we...  
+  
+* **Generalize** our code to be used for other purposes.    
+* **Document** code to effectively communicate processes to our future selves &amp; others.  
+* Enable code to be **shared** easily with others.  
+  
+---
 
 # Our Objective  
   
@@ -63,6 +77,7 @@ To demonstrate the basics of creating a package in R.
 1. Function(s) you want in your package.  
 2. Packages `devtools` and `roxygen2`   
 ]
+  
   
   
 ---
@@ -354,15 +369,7 @@ minus_ten &lt;- function(number) {
 --
   
 2. Render your documentation: `devtools::document()`  
-  
-
-```r
-Writing NAMESPACE
-Loading mathFun
-Writing NAMESPACE
-Writing add_ten.Rd
-Writing minus_ten.Rd
-```
+  + This should create `.Rd` files in the `man` folder.  
   
 --
   

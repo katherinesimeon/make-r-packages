@@ -30,6 +30,9 @@ class: title-slide, left, middle
 <br>
 <h3> Northwestern R User Group <br> March 7, 2019 </h3>  
   
+<br>
+<.small[Slides at `r fontawesome::fa("github")` [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)] 
+  
 ---
   
 # Acknowledgments  
@@ -42,6 +45,20 @@ class: title-slide, left, middle
 Stephanie Kirmer's [R Package Tutorial](https://github.com/skirmer/r_packages)   
   
 Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)  
+  
+---
+  
+# Why packages?  
+  
+A package is a **fundamental**, **reproducible**, and **shareable** unit of R code.  
+  
+--
+  
+When we create a package, we...  
+  
+* **Generalize** our code to be used for other purposes.    
+* **Document** code to effectively communicate processes to our future selves & others.  
+* Enable code to be **shared** easily with others.  
   
 ---
 
@@ -67,6 +84,7 @@ To demonstrate the basics of creating a package in R.
 1. Function(s) you want in your package.  
 2. Packages `devtools` and `roxygen2`   
 ]
+  
   
   
 ---
@@ -348,14 +366,7 @@ minus_ten <- function(number) {
 --
   
 2. Render your documentation: `devtools::document()`  
-  
-```{r, eval=FALSE}
-Writing NAMESPACE
-Loading mathFun
-Writing NAMESPACE
-Writing add_ten.Rd
-Writing minus_ten.Rd
-```
+  + This should create `.Rd` files in the `man` folder.  
   
 --
   
