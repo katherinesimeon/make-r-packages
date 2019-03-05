@@ -31,8 +31,9 @@ class: title-slide, left, middle
 <h3> Northwestern R User Group <br> March 7, 2019 </h3>  
   
 <br>
-<.small[Slides at `r fontawesome::fa("github")` [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)] 
-  
+<h3> `r fontawesome::fa("github")` [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)  </h3> 
+
+    
 ---
   
 # Acknowledgments  
@@ -51,6 +52,8 @@ Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)
 # Why packages?  
   
 A package is a **fundamental**, **reproducible**, and **shareable** unit of R code.  
+  
+<br>
   
 --
   
