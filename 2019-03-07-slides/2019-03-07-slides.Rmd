@@ -31,7 +31,7 @@ class: title-slide, left, middle
 <h3> Northwestern R User Group <br> March 7, 2019 </h3>  
   
 <br>
-<h3> `r fontawesome::fa("github")` [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)  </h3> 
+`r fontawesome::fa("github")` [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)  
 
     
 ---
