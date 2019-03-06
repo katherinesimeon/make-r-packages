@@ -429,14 +429,20 @@ Use `devtools` to run your tests.
   
 <br>
   
-Data is stored in an `.RData` file stored in a "data" folder.  
+Data is stored in an `.RDa` file stored in a "data" folder.  
   
   
 Load your data into your working directory and save it:  
   
 ```{r, eval=FALSE}
-save(mydata,file="data/mydata.RData") 
+usethis::use_data(mydata) 
 ```
    
    
-Add a `data.R` file that has documentation of your dataset (with roxygen comments).  
+Add a `data.R` file that has documentation of **all** datasets in a package with roxygen comments.  
+  
+--
+  
+*This should not be done with large data sets!*
+  
+
