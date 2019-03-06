@@ -402,6 +402,14 @@ minus_ten <- function(number) {
    
    
 ---
+  
+# Other package considerations  
+  
+  
+* Unit testing (making sure each of your functions work)  
+* Including datasets in your package  
+   
+---
     
 # Unit Testing  
     
@@ -457,4 +465,8 @@ See a good example of this documentation in [ggplot2](https://github.com/tidyver
 *This should not be done with large data sets!*
   
 
-
+  
+---
+class: center, middle, inverse  
+  
+# Happy Package Making! 
