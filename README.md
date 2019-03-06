@@ -4,7 +4,7 @@ A brief tutorial/demo on making packages in R for the [Northwestern R User Group
   
 This repo contains the following:  
   
-* Presentation slides  
+* [Slide Deck](https://katherinesimeon.github.io/make-r-packages/)    
 * Demo package that can be used as an example  
   
   
