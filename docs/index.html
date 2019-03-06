@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Make an R Package!</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Katherine Simeon" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, left, middle
+
+# Make an R Package! 📦 
+
+&lt;br&gt;
+
+
+&lt;h3&gt; Katherine Simeon &lt;/h3&gt;  
+
+&lt;br&gt;
+&lt;h3&gt; Northwestern R User Group &lt;br&gt; March 7, 2019 &lt;/h3&gt;  
+  
+&lt;br&gt;
+&lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/&gt;&lt;/svg&gt; [github.com/katherinesimeon/make-r-packages](https://github.com/katherinesimeon)  
+
+    
+---
+  
+# Acknowledgments  
+  
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    
+    
+&lt;img src="https://rladieschicago.org/img/rladies-chicago_banner_plain.jpg" height="50px" &gt;  
+  
+Stephanie Kirmer's [R Package Tutorial](https://github.com/skirmer/r_packages)   
+  
+Hadley Wickham's book, [R Packages](http://r-pkgs.had.co.nz/)  
+  
+---
+  
+# Why packages?  
+  
+A package is a **fundamental**, **reproducible**, and **shareable** unit of R code.  
+  
+&lt;br&gt;
+  
+--
+  
+When we create a package, we...  
+  
+* **Generalize** our code to be used for other purposes.    
+* **Document** code to effectively communicate processes to our future selves &amp; others.  
+* Enable code to be **shared** easily with others.  
+  
+---
+
+# Our Objective  
+  
+To demonstrate the basics of creating a package in R.  
+ 
+--
+  
+.pull-left[
+## What we'll do:   
+  
+1. Set up an `.RProj` file to be made into a package.    
+2. Document the functions.  
+3. Compile documentation &amp; install our package.  
+]
+  
+--
+  
+.pull-right[
+## What we need:  
+  
+1. Function(s) you want in your package.  
+2. Packages `devtools` and `roxygen2` (we'll use `usethis` too)   
+]
+  
+  
+  
+---
+    
+# First steps  
+  
+**1.** Install the 📦s used to make a 📦  
+  
+
+```r
+# Install your packages
+install.packages(“devtools”) # you definitely need these packages
+install.packages(“roxygen2”)
+
+install.packages("usethis") # you could also use this 
+
+# Load the packages
+library(devtools)
+library(roxygen2)
+library(usethis)
+```
+  
+&lt;br&gt;
+  
+**2.** Put all the functions you want in your package into a single directory. 
+  
+---
+  
+# Make an R project  
+    
+Then, we'll create a project:  
+    
+.center[ &lt;img src="img/Rproj1.png" height="100px" /&gt; ]  
+  
+--
+  
+.pull-left[
+&lt;img src="img/Rproj2.png" /&gt; 
+]
+  
+--
+  
+.pull-right[
+&lt;img src="img/Rproj3.png" /&gt;   
+]
+  
+---
+  
+# Package Set Up  
+  
+  
+.pull-left[
+  
+1. Name your package.  
+2. Indicate what files you want in your package (these files should be in a single directory).    
+3. Create your project as a subdirectory in the same location as the aforementioned files.
+]
+  
+  
+.pull-right[
+&lt;img src="img/Rproj4.png" /&gt;   
+]
+  
+---
+  
+# From the command line  
+    
+&lt;img src="https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png" height="70px" align="right" /&gt;
+  
+&lt;br&gt;  
+  
+Use `usethis` - a [package](https://github.com/r-lib/usethis) that automates repetitive tasks in project development:  
+
+```r
+usethis::create_package("packagename")
+```
+   
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION        
+    |                       
+    ├── NAMESPACE
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+*   ├── DESCRIPTION
+    |                       
+    ├── NAMESPACE
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     
+```
+  
+---
+  
+# We have a package!
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata!  
+    |                       
+*   ├── NAMESPACE
+    |
+    ├── R/                    
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata!  
+    |                       
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+*   ├── R/
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj    
+```
+  
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                       
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+*   ├── man/
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     
+```
+  
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                        
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   # Documentation for functions
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+*   └── A_package.Rproj
+```
+  
+---
+  
+# We have a package!  
+  
+
+```r
+aPACKAGE  
+    |
+    ├── DESCRIPTION         # Important metadata! 
+    |                        
+    ├── NAMESPACE           # Specifies functions used in package
+    |
+    ├── R/                    # Functions that are in your package
+    │   ├── Function1.R       
+    │   └── Function2.R   
+    |
+    ├── man/                   # Documentation for functions
+    │   ├── Function1.Rd       
+    │   └── Function2.Rd 
+    |
+    └── A_package.Rproj     # R project file you created for your package
+```
+  
+---
+  
+# Documentation  
+  
+.pull-left[
+1. Open a function script.  
+2. Place your cursor inside the function's curley brackets `{}`  
+3. In top dropdown menu:  
+  + Click **Code**  
+  + Select **Insert Roxygen Skeleton**   
+  
+]
+   
+--
+  
+.pull-right[
+Fill this out:  
+  
+&lt;img src="img/roxygen.png" height="200px" /&gt;   
+]
+  
+  
+---
+  
+# Roxygen Skeleton  
+  
+
+```r
+#' Minus Ten  
+#'  
+#' Subtract 10 from a given number
+#'
+#' @param number a number
+#'
+#' @return a number that is the provided number minus 10
+#' @export
+#'
+#' @examples
+#' minus_ten(22) will return 12
+minus_ten &lt;- function(number) {
+  number-10
+}
+```
+  
+&lt;br&gt;
+  
+.right[Learn more at http://r-pkgs.had.co.nz/man.html]
+  
+  
+---
+  
+# Make your package!   
+  
+&lt;br&gt;
+  
+1. Make sure the working directory is the main package folder.  
+  
+--
+  
+2. Render your documentation: `devtools::document()`  
+  + This should create `.Rd` files in the `man` folder.  
+  
+--
+  
+3. Install your package: `devtools::install()`  
+  
+  
+--
+  
+&lt;br&gt;
+  
+.right[*These are also the steps for updating your package later on!*]    
+  
+  
+---
+  
+# Sharing your package  
+  
+&lt;br&gt;
+  
+1. `devtools::install()` with the package folder on the local computer.  
+  
+2. `devtools::install_github("USERNAME/REPO_NAME")` with the package directory as a GitHub repo.    
+   
+   
+---
+  
+# Other package considerations  
+  
+  
+* Unit testing (making sure each of your functions work)  
+* Including datasets in your package  
+   
+---
+    
+# Unit Testing  
+    
+&lt;img src="https://raw.githubusercontent.com/r-lib/testthat/master/man/figures/logo.png" height="70px" align="right" /&gt;
+  
+&lt;br&gt;  
+  
+The `testthat` [package](https://github.com/r-lib/testthat) has functions that help create unit tests.  
+  
+In the main directory of your package, use `usethis`  
+
+
+```r
+usethis::use_test("functionname") # Create your test
+
+devtools::test() # Runs the test you've made.
+```
+  
+--
+  
+&lt;br&gt;
+  
+This will create a `test` folder with an R script for your unit test.    
+    
+Use `devtools` to run your tests.  
+  
+  
+  
+    
+---
+  
+# Add dataset to a package  
+  
+&lt;br&gt;
+  
+Data is stored in an `.RDa` file stored in a `data` folder.  
+   
+   
+Load your data into your working directory and save it:  
+  
+
+```r
+usethis::use_data(mydata) 
+```
+   
+   
+Add a `data.R` file that has documentation of **all** datasets in a package with roxygen comments.   
+   
+  
+See a good example of this documentation in [ggplot2](https://github.com/tidyverse/ggplot2/blob/master/R/data.R).  
+  
+  
+--
+  
+*This should not be done with large data sets!*
+  
+
+  
+---
+class: center, middle, inverse  
+  
+# Happy Package Making!
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
