@@ -81,7 +81,7 @@ To demonstrate the basics of creating a package in R.
 ## What we need:  
   
 1. Function(s) you want in your package.  
-2. Packages `devtools` and `roxygen2`   
+2. Packages `devtools` and `roxygen2` (we'll use `usethis` too)   
 ]
   
   
@@ -94,11 +94,16 @@ To demonstrate the basics of creating a package in R.
   
 
 ```r
-install.packages(“devtools”) # Install
+# Install your packages
+install.packages(“devtools”) # you definitely need these packages
 install.packages(“roxygen2”)
 
-library(devtools) # Load
+install.packages("usethis") # you could also use this 
+
+# Load the packages
+library(devtools)
 library(roxygen2)
+library(usethis)
 ```
   
 &lt;br&gt;
@@ -436,18 +441,26 @@ Use `devtools` to run your tests.
   
 &lt;br&gt;
   
-Data is stored in an `.RData` file stored in a "data" folder.  
+Data is stored in an `.RDa` file stored in a "data" folder.  
   
   
 Load your data into your working directory and save it:  
   
 
 ```r
-save(mydata,file="data/mydata.RData") 
+usethis::use_data(mydata) 
 ```
    
    
-Add a `data.R` file that has documentation of your dataset (with roxygen comments).
+Add a `data.R` file that has documentation of **all** datasets in a package with roxygen comments.   
+   
+  
+See a good example of this documentation in [ggplot2](https://github.com/tidyverse/ggplot2/blob/master/R/data.R).  
+  
+  
+--
+  
+*This should not be done with large data sets!*
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
