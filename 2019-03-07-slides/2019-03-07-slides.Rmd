@@ -423,20 +423,22 @@ devtools::test() # Runs the test you've made.
   
 <br>
   
-This will create a tes`t fos`lder with an R script to write your unit test.  
-  
+This will create a `test` folder with an R script for your unit test.    
+    
 Use `devtools` to run your tests.  
   
   
+  
+    
 ---
   
 # Add dataset to a package  
   
 <br>
   
-Data is stored in an `.RDa` file stored in a "da`a" f`lder.  
-  
-  
+Data is stored in an `.RDa` file stored in a `data` folder.  
+   
+   
 Load your data into your working directory and save it:  
   
 ```{r, eval=FALSE}
