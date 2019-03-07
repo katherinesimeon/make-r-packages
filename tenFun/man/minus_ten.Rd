@@ -16,6 +16,6 @@ a number that is the provided number minus 10
 Subtract 10 from a given number
 }
 \examples{
-minus_ten(22) will return 12
-minus_ten(22:25) will return 12 13 14 15
+minus_ten(22) # will return 12
+minus_ten(22:25) # will return 12 13 14 15
 }
