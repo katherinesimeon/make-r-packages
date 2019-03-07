@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' minus_ten(22) will return 12
-#' minus_ten(22:25) will return 12 13 14 15
+#' minus_ten(22) # will return 12
+#' minus_ten(22:25) # will return 12 13 14 15
 minus_ten <- function(number) {
   number-10
 }
